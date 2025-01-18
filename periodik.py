@@ -1,5 +1,6 @@
 import streamlit as st
 import time
+
 st.image("sunrise.jpg", caption="Sunrise by the mountains")
 # Fungsi untuk menambahkan gaya kustom
 def add_custom_styles():
