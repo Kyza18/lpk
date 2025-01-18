@@ -176,7 +176,7 @@ if st.session_state["page"] == "welcome":
 # Halaman Tabel Periodik
 elif st.session_state["page"] == "table":
     st.title("Tabel Periodik Sederhana")
-    st.balloons("🎈")
+    st.balloons()
     unsur = st.text_input("Masukkan Nama Unsur (misal: Hidrogen):")
 
     
@@ -189,7 +189,9 @@ elif st.session_state["page"] == "table":
             st.markdown(f'<div class="card card-blue"><strong>Nomor Massa:</strong> {data["nomor_massa"]}</div>', unsafe_allow_html=True)
             st.success('This is a success!', icon="✅")
             st.success('congrats!', icon="🔥")
-            st.toast('Your edited image was saved!', icon='😍')
+            st.toast('Your search was saved!', icon='😍')
+            st.toast('Your searching done!', icon='🎈')
+            st.toast('Your very cool!', icon='🔥')
             sentiment_mapping = ["one", "two", "three", "four", "five"]
             selected = st.feedback("stars")
             if selected is not None:
