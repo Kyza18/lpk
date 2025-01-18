@@ -169,8 +169,8 @@ if st.session_state["page"] == "welcome":
     """, unsafe_allow_html=True)
     st.button("Next", on_click=go_to_page, args=("table",))
     st.snow()
-    with st.spinner('Wait for it...'):
-    time.sleep(2)
+with st.spinner('Wait for it...'):
+    time.sleep(5)
     st.success("WELCOME!")
 # Halaman Tabel Periodik
 elif st.session_state["page"] == "table":
