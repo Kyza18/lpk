@@ -4,7 +4,7 @@ import time
 pages = {
     "Your account": [
         st.Page("create_account.py", title="Create your account"),
-        st.Page("manage_account.py", title="Manage your account"),
+        st.page_name("manage_account.py", title="Manage your account"),
     ],
     "Resources": [
         st.Page("learn.py", title="Learn about us"),
