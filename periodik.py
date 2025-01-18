@@ -168,11 +168,11 @@ if st.session_state["page"] == "welcome":
         </div>
     """, unsafe_allow_html=True)
     st.button("Next", on_click=go_to_page, args=("table",))
-
+    st.snow()
 # Halaman Tabel Periodik
 elif st.session_state["page"] == "table":
     st.title("Tabel Periodik Sederhana")
-    st.snow()
+    st.balloons()
     unsur = st.text_input("Masukkan Nama Unsur (misal: Hidrogen):")
 
     
