@@ -157,7 +157,7 @@ if st.session_state["page"] == "welcome":
     st.toast('Hip!')
     time.sleep(.5)
     st.toast('Hooray!', icon='🎉') 
-with st.spinner('Wait for it...'):
+    st.spinner('Wait for it...'):
     time.sleep(.5)
     st.success("WELCOME!")
     st.markdown("""
