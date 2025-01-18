@@ -153,14 +153,11 @@ add_custom_styles()
 # Halaman Selamat Datang
 if st.session_state["page"] == "welcome":
     st.title("Selamat Datang di Aplikasi Tabel Periodik Sederhana")
-with st.spinner('Wait for it...'):
+    st.toast('Hip!')
     time.sleep(.5)
-st.success("DONE!")
-st.toast('Hip!')
+    st.toast('Hip!')
     time.sleep(.5)
-st.toast('Hip!')
-    time.sleep(.5)
-st.toast('Hooray!', icon='🎉') 
+    st.toast('Hooray!', icon='🎉') 
     st.markdown("""
         <div class="card card-blue">
         <h3>Tujuan Pembuatan:</h3>
