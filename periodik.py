@@ -174,7 +174,7 @@ with st.spinner('Wait for it...'):
     st.success("WELCOME!")
     
 # Halaman Tabel Periodik
-elif st.session_state["page"] == "table":
+    elif st.session_state["page"] == "table":
     st.title("Tabel Periodik Sederhana")
     st.balloons()
     unsur = st.text_input("Masukkan Nama Unsur (misal: Hidrogen):")
