@@ -140,8 +140,7 @@ unsur_data = {
 }
 with st.spinner('Wait for it...'):
     time.sleep(.5)
-st.success("WELCOME!")
-def go_to_page(page_name):
+st.success("DONE!")
 
 # Inisialisasi halaman jika belum ada
 if "page" not in st.session_state:
