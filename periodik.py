@@ -140,9 +140,6 @@ def add_custom_styles():
         </style>
     """, unsafe_allow_html=True)
 
-# Panggil fungsi untuk menambahkan gaya kustom
-add_custom_styles()
-
 # Inisialisasi halaman jika belum ada
 if "page" not in st.session_state:
     st.session_state["page"] = "welcome"
@@ -162,11 +159,11 @@ if st.session_state["page"] == "welcome":
         </div>
     """, unsafe_allow_html=True)
     if st.button("Next"):
-        st.session_state["page"] = "table"
+        st.session["page"] = "table"
         st.balloons()
 
 # Halaman Tabel Periodik
-elif st.session_state["page"] == "table":
+elif st.session["page"] == "table":
     st.title("Tabel Periodik Sederhana")
     unsur = st.text_input("Masukkan Nama Unsur (misal: Hidrogen):")
     
