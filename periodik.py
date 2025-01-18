@@ -140,22 +140,9 @@ def add_custom_styles():
     </style>
     """, unsafe_allow_html=True)
 
-    
-    if unsur:
-        unsur = unsur.lower()  # Pastikan input pengguna dalam huruf kecil
-        if unsur in unsur_data:
-            data = unsur_data[unsur]
-
 # Inisialisasi halaman jika belum ada
 if "page" not in st.session_state:
     st.session_state["page"] = "welcome"
-
-# Fungsi untuk pindah halaman
-def go_to_page(page_name):
-    st.session_state["page"] = page_name
-
-# Tambahkan gaya kustom
-add_custom_styles()
 
 # Halaman Selamat Datang
 if st.session_state["page"] == "welcome":
@@ -171,16 +158,23 @@ if st.session_state["page"] == "welcome":
         </div>
     """, unsafe_allow_html=True)
     st.button("Next", on_click=go_to_page, args=("table",))
+    st.balloons
+# Fungsi untuk pindah halaman
+def go_to_page(page_name):
+    st.session_state["page"] = page_name
+
+# Tambahkan gaya kustom
+add_custom_styles()
 
 # Halaman Tabel Periodik
 elif st.session_state["page"] == "table":
     st.title("Tabel Periodik Sederhana")
     unsur = st.text_input("Masukkan Nama Unsur (misal: Hidrogen):")
-    
-    if unsur:
+     if unsur:
         unsur = unsur.lower()  # Pastikan input pengguna dalam huruf kecil
         if unsur in unsur_data:
             data = unsur_data[unsur]
+    
             st.markdown(f'<div class="card card-green"><strong>Simbol Unsur:</strong> {data["simbol"]}</div>', unsafe_allow_html=True)
             st.markdown(f'<div class="card card-orange"><strong>Nomor Atom:</strong> {data["nomor_atom"]}</div>', unsafe_allow_html=True)
             st.markdown(f'<div class="card card-blue"><strong>Nomor Massa:</strong> {data["nomor_massa"]}</div>', unsafe_allow_html=True)
