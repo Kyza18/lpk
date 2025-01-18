@@ -185,12 +185,11 @@ elif st.session_state["page"] == "table":
             st.error("Unsur tidak ditemukan. Harap masukkan nama unsur yang benar.")
             st.error('This is an error', icon="🚨")
         
-    if st.button('Three cheers'):
+    if st.button('back'):
             st.toast('Hip!')
             time.sleep(.5)
             st.toast('Hip!')
             time.sleep(.5)
             st.toast('Hooray!', icon='🎉')
         
-    st.button("Back", on_click=go_to_page, args=("welcome",))
 
