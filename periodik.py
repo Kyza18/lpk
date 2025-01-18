@@ -1,9 +1,6 @@
 import streamlit as st
 import time
 
-with st.spinner('Wait for it...'):
-    time.sleep(.5)
-st.success("WELCOME!")
 # Fungsi untuk menambahkan gaya kustom
 def add_custom_styles():
     st.markdown("""
@@ -141,7 +138,9 @@ unsur_data = {
     "tenesium": {"simbol": "Ts", "nomor_atom": 117, "nomor_massa": 294},
     "oganeson": {"simbol": "Og", "nomor_atom": 118, "nomor_massa": 294},
 }
-
+with st.spinner('Wait for it...'):
+    time.sleep(.5)
+st.success("WELCOME!")
 # Inisialisasi halaman jika belum ada
 if "page" not in st.session_state:
     st.session_state["page"] = "welcome"
