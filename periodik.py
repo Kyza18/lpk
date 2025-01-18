@@ -172,7 +172,7 @@ if st.session_state["page"] == "welcome":
 # Halaman Tabel Periodik
 elif st.session_state["page"] == "table":
     st.title("Tabel Periodik Sederhana")
-    st.balloons()
+    st.snow()
     unsur = st.text_input("Masukkan Nama Unsur (misal: Hidrogen):")
 
     
