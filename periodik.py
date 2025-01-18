@@ -142,7 +142,7 @@ with st.spinner('Wait for it...'):
     time.sleep(.5)
 st.success("WELCOME!")
 def go_to_page(page_name):
-st.session_state["WELCOME"] = page_name
+st.session_state["page"] = page_name
 # Inisialisasi halaman jika belum ada
 if "page" not in st.session_state:
     st.session_state["page"] = "welcome"
