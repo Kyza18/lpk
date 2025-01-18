@@ -189,10 +189,10 @@ elif st.session_state["page"] == "table":
             st.success('This is a success!', icon="✅")
             st.success('congrats!', icon="🔥")
             st.toast('Your edited image was saved!', icon='😍')
-                sentiment_mapping = ["one", "two", "three", "four", "five"]
-                selected = st.feedback("stars")
-                if selected is not None:
-                    st.markdown(f"You selected {sentiment_mapping[selected]} star(s).")
+            sentiment_mapping = ["one", "two", "three", "four", "five"]
+            selected = st.feedback("stars")
+            if selected is not None:
+                st.markdown(f"You selected {sentiment_mapping[selected]} star(s).")
         else:
             st.error("Unsur tidak ditemukan. Harap masukkan nama unsur yang benar.")
             st.error('This is an error', icon="🚨")
