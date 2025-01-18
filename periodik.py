@@ -1,7 +1,7 @@
 import streamlit as st
 import time
 
-st.image("https://images.unsplash.com/photo-1735447814306-8887e953a91f?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+st.image("https://media.istockphoto.com/id/516796706/id/foto/simbol-besi-fe-elemen-tabel-periodik-diperbesar.jpg?s=612x612&w=0&k=20&c=BKuDITh0QK0HWQOJsMMEkB0n0hlZIEo7C0HC6hHzFao=")
 # Fungsi untuk menambahkan gaya kustom
 def add_custom_styles():
     st.markdown("""
