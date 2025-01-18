@@ -129,7 +129,7 @@ def add_custom_styles():
     st.markdown("""
     <style>
         body {}
-        .stTextInput, .stButton { background-color: #e0f7e8 !important; border: 1px solid #76c893 !important; border-radius: 5px; }
+        .stTextInput, .stButton { background-color: #e0f7e8 !important; border: 1px solid #76c893 !important; border-radius: 2px; }
         .stButton button { color: white; background-color: #ffa500 !important; font-weight: bold; }
         .stButton button:hover { background-color: #e4882c !important; }
         h1 { color: #4d88ff; text-align: center; }
