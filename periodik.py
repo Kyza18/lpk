@@ -157,6 +157,9 @@ if st.session_state["page"] == "welcome":
     st.toast('Hip!')
     time.sleep(.5)
     st.toast('Hooray!', icon='🎉')
+    with st.spinner('Wait for it...'):
+    time.sleep(5)
+    st.success("WELCOME!")
     st.markdown("""
         <div class="card card-blue">
         <h3>Tujuan Pembuatan:</h3>
@@ -169,12 +172,10 @@ if st.session_state["page"] == "welcome":
     """, unsafe_allow_html=True)
     st.button("Next", on_click=go_to_page, args=("table",))
     st.snow()
-with st.spinner('Wait for it...'):
-    time.sleep(5)
-    st.success("WELCOME!")
+
     
 # Halaman Tabel Periodik
-    elif st.session_state["page"] == "table":
+elif st.session_state["page"] == "table":
     st.title("Tabel Periodik Sederhana")
     st.balloons()
     unsur = st.text_input("Masukkan Nama Unsur (misal: Hidrogen):")
