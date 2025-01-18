@@ -153,7 +153,7 @@ add_custom_styles()
 # Halaman Selamat Datang
 if st.session_state["page"] == "welcome":
     st.title("Selamat Datang di Aplikasi Tabel Periodik Sederhana")
- with st.spinner('Wait for it...'):
+with st.spinner('Wait for it...'):
     time.sleep(.5)
 st.success("DONE!")
     st.toast('Hip!')
