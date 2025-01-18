@@ -162,7 +162,7 @@ if st.session_state["page"] == "welcome":
         </div>
     """, unsafe_allow_html=True)
     st.button("Next", on_click=go_to_page, args=("table",))
-    st.balloons
+    st.balloons()
 
 # Halaman Tabel Periodik
 elif st.session_state["page"] == "table":
