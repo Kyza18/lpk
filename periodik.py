@@ -1,5 +1,9 @@
 import streamlit as st
 import time
+
+with st.spinner('Wait for it...'):
+    time.sleep(.5)
+st.success("WELCOME!")
 # Fungsi untuk menambahkan gaya kustom
 def add_custom_styles():
     st.markdown("""
@@ -157,9 +161,6 @@ if st.session_state["page"] == "welcome":
     st.toast('Hip!')
     time.sleep(.5)
     st.toast('Hooray!', icon='🎉') 
-with st.spinner('Wait for it...'):
-    time.sleep(.5)
-st.success("WELCOME!")
     st.markdown("""
         <div class="card card-blue">
         <h3>Tujuan Pembuatan:</h3>
