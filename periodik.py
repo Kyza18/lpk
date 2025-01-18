@@ -140,12 +140,14 @@ def add_custom_styles():
     </style>
     """, unsafe_allow_html=True)
 
-# Inisialisasi data unsur
-unsur_data = {
-    "hidrogen": {"simbol": "H", "nomor_atom": 1, "nomor_massa": 1},
-    "helium": {"simbol": "He", "nomor_atom": 2, "nomor_massa": 4},
-    # Tambahkan unsur lainnya sesuai kebutuhan
-}
+elif st.session_state["page"] == "table":
+    st.title("Tabel Periodik Sederhana")
+    unsur = st.text_input("Masukkan Nama Unsur (misal: Hidrogen):")
+    
+    if unsur:
+        unsur = unsur.lower()  # Pastikan input pengguna dalam huruf kecil
+        if unsur in unsur_data:
+            data = unsur_data[unsur]
 
 # Inisialisasi halaman jika belum ada
 if "page" not in st.session_state:
