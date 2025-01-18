@@ -146,6 +146,7 @@ add_custom_styles()
 # Inisialisasi halaman jika belum ada
 if "page" not in st.session_state:
     st.session_state["page"] = "welcome"
+    st.experimental_rerun()
     
 # Halaman Selamat Datang
 if st.session_state["page"] == "welcome":
@@ -162,7 +163,6 @@ if st.session_state["page"] == "welcome":
     """, unsafe_allow_html=True)
     if st.button("Next"):
         st.session_state["page"] = "table"
-        st.experimental_rerun()
         st.balloons()
 
 # Halaman Tabel Periodik
