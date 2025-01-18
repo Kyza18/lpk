@@ -122,13 +122,13 @@ unsur_data = {
     "oganeson": {"simbol": "Og", "nomor_atom": 118, "nomor_massa": 294},
 }
 
+import streamlit as st
+
 # Fungsi untuk menambahkan gaya kustom
 def add_custom_styles():
     st.markdown("""
-<style>
-        body {
-        
-        }
+    <style>
+        body {}
         .stTextInput, .stButton { background-color: #e0f7e8 !important; border: 1px solid #76c893 !important; border-radius: 5px; }
         .stButton button { color: white; background-color: #ffa500 !important; font-weight: bold; }
         .stButton button:hover { background-color: #e4882c !important; }
@@ -137,16 +137,29 @@ def add_custom_styles():
         .card-green { background-color: #e0f7e8; border: 1px solid #76c893; color: #006644; }
         .card-orange { background-color: #ffe5cc; border: 1px solid #ff9f43; color: #cc5200; }
         .card-blue { background-color: #d8e9ff; border: 1px solid #4d88ff; color: #0040cc; }
-        </style>
+    </style>
     """, unsafe_allow_html=True)
+
+# Inisialisasi data unsur
+unsur_data = {
+    "hidrogen": {"simbol": "H", "nomor_atom": 1, "nomor_massa": 1},
+    "helium": {"simbol": "He", "nomor_atom": 2, "nomor_massa": 4},
+    # Tambahkan unsur lainnya sesuai kebutuhan
+}
 
 # Inisialisasi halaman jika belum ada
 if "page" not in st.session_state:
     st.session_state["page"] = "welcome"
-    
-    
+
+# Fungsi untuk pindah halaman
+def go_to_page(page_name):
+    st.session_state["page"] = page_name
+
+# Tambahkan gaya kustom
+add_custom_styles()
+
 # Halaman Selamat Datang
-if st.session_state["page"] = "welcome":
+if st.session_state["page"] == "welcome":
     st.title("Selamat Datang di Aplikasi Tabel Periodik Sederhana")
     st.markdown("""
         <div class="card card-blue">
@@ -158,9 +171,7 @@ if st.session_state["page"] = "welcome":
         </ul>
         </div>
     """, unsafe_allow_html=True)
-    if st.button("Next"):
-        st.session_state["page"] = "table"
-        st.balloons()
+    st.button("Next", on_click=go_to_page, args=("table",))
 
 # Halaman Tabel Periodik
 elif st.session_state["page"] == "table":
@@ -178,6 +189,6 @@ elif st.session_state["page"] == "table":
         else:
             st.error("Unsur tidak ditemukan. Harap masukkan nama unsur yang benar.")
         
-    if st.button("Back"):
-        st.session_state["page"] = "welcome"
+    st.button("Back", on_click=go_to_page, args=("welcome",))
+
   
