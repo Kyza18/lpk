@@ -172,6 +172,7 @@ if st.session_state["page"] == "welcome":
 with st.spinner('Wait for it...'):
     time.sleep(5)
     st.success("WELCOME!")
+    
 # Halaman Tabel Periodik
 elif st.session_state["page"] == "table":
     st.title("Tabel Periodik Sederhana")
