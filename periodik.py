@@ -177,8 +177,8 @@ elif st.session_state["page"] == "table":
             st.markdown(f'<div class="card card-green"><strong>Simbol Unsur:</strong> {data["simbol"]}</div>', unsafe_allow_html=True)
             st.markdown(f'<div class="card card-orange"><strong>Nomor Atom:</strong> {data["nomor_atom"]}</div>', unsafe_allow_html=True)
             st.markdown(f'<div class="card card-blue"><strong>Nomor Massa:</strong> {data["nomor_massa"]}</div>', unsafe_allow_html=True)
-            st.success(icon="🔥"'This is a success!')
-            st.success('congrats!', icon="✅")
+            st.success('This is a success!', icon="✅")
+            st.success('congrats!', icon="🔥")
         else:
             st.error("Unsur tidak ditemukan. Harap masukkan nama unsur yang benar.")
         
