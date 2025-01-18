@@ -181,11 +181,11 @@ elif st.session_state["page"] == "table":
             st.success('This is a success!', icon="✅")
             st.success('congrats!', icon="🔥")
             if st.button('Three cheers'):
-    st.toast('Hip!')
-    time.sleep(.5)
-    st.toast('Hip!')
-    time.sleep(.5)
-    st.toast('Hooray!', icon='🎉')
+            st.toast('Hip!')
+            time.sleep(.5)
+            st.toast('Hip!')
+            time.sleep(.5)
+            st.toast('Hooray!', icon='🎉')
             st.toast('Your edited image was saved!', icon='😍')
         else:
             st.error("Unsur tidak ditemukan. Harap masukkan nama unsur yang benar.")
