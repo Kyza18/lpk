@@ -193,11 +193,6 @@ elif st.session_state["page"] == "table":
         else:
             st.error("Unsur tidak ditemukan. Harap masukkan nama unsur yang benar.")
             st.error('This is an error', icon="🚨")
-            
-          sentiment_mapping = ["one", "two", "three", "four", "five"]
-selected = st.feedback("stars")
-if selected is not None:
-    st.markdown(f"You selected {sentiment_mapping[selected]} star(s).")
     
     if st.button("back",on_click=go_to_page, args=("welcome",)):
             st.toast('Hip!')
@@ -205,5 +200,9 @@ if selected is not None:
             st.toast('Hip!')
             time.sleep(.5)
             st.toast('Hooray!', icon='🎉')
+sentiment_mapping = ["one", "two", "three", "four", "five"]
+selected = st.feedback("stars")
+if selected is not None:
+    st.markdown(f"You selected {sentiment_mapping[selected]} star(s).")
         
 
