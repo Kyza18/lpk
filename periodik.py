@@ -179,8 +179,10 @@ elif st.session_state["page"] == "table":
             st.markdown(f'<div class="card card-blue"><strong>Nomor Massa:</strong> {data["nomor_massa"]}</div>', unsafe_allow_html=True)
             st.success('This is a success!', icon="✅")
             st.success('congrats!', icon="🔥")
+            st.toast('Your edited image was saved!', icon='😍')
         else:
             st.error("Unsur tidak ditemukan. Harap masukkan nama unsur yang benar.")
+            st.error('This is an error', icon="🚨")
         
     st.button("Back", on_click=go_to_page, args=("welcome",))
 
