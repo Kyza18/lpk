@@ -180,7 +180,8 @@ elif st.session_state["page"] == "table":
             st.markdown(f'<div class="card card-blue"><strong>Nomor Massa:</strong> {data["nomor_massa"]}</div>', unsafe_allow_html=True)
             st.success('This is a success!', icon="✅")
             st.success('congrats!', icon="🔥")
-            st.button('Three cheers'):
+            
+    if st.button('Three cheers'):
             st.toast('Hip!')
             time.sleep(.5)
             st.toast('Hip!')
