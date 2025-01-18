@@ -146,7 +146,7 @@ add_custom_styles()
 # Inisialisasi halaman jika belum ada
 if "page" not in st.session_state:
     st.session_state["page"] = "welcome"
-    st.experimental_rerun()
+    
     
 # Halaman Selamat Datang
 if st.session_state["page"] == "welcome":
