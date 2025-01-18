@@ -146,7 +146,7 @@ if "page" not in st.session_state:
     
     
 # Halaman Selamat Datang
-if st.session_state["page"] == "welcome":
+if st.session_state["page"] = "welcome":
     st.title("Selamat Datang di Aplikasi Tabel Periodik Sederhana")
     st.markdown("""
         <div class="card card-blue">
@@ -159,11 +159,11 @@ if st.session_state["page"] == "welcome":
         </div>
     """, unsafe_allow_html=True)
     if st.button("Next"):
-        st.session["page"] = "table"
+        st.session_state["page"] = "table"
         st.balloons()
 
 # Halaman Tabel Periodik
-elif st.session["page"] == "table":
+elif st.session_state["page"] == "table":
     st.title("Tabel Periodik Sederhana")
     unsur = st.text_input("Masukkan Nama Unsur (misal: Hidrogen):")
     
