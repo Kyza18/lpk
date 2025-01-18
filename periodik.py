@@ -138,9 +138,6 @@ unsur_data = {
     "tenesium": {"simbol": "Ts", "nomor_atom": 117, "nomor_massa": 294},
     "oganeson": {"simbol": "Og", "nomor_atom": 118, "nomor_massa": 294},
 }
-with st.spinner('Wait for it...'):
-    time.sleep(.5)
-st.success("DONE!")
 
 # Inisialisasi halaman jika belum ada
 if "page" not in st.session_state:
@@ -156,6 +153,9 @@ add_custom_styles()
 # Halaman Selamat Datang
 if st.session_state["page"] == "welcome":
     st.title("Selamat Datang di Aplikasi Tabel Periodik Sederhana")
+ with st.spinner('Wait for it...'):
+    time.sleep(.5)
+st.success("DONE!")
     st.toast('Hip!')
     time.sleep(.5)
     st.toast('Hip!')
