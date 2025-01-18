@@ -156,9 +156,9 @@ if st.session_state["page"] == "welcome":
     time.sleep(.5)
     st.toast('Hip!')
     time.sleep(.5)
-    st.toast('Hooray!', icon='🎉')
-    with st.spinner('Wait for it...'):
-    time.sleep(5)
+    st.toast('Hooray!', icon='🎉') 
+with st.spinner('Wait for it...'):
+    time.sleep(.5)
     st.success("WELCOME!")
     st.markdown("""
         <div class="card card-blue">
