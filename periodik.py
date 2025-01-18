@@ -164,7 +164,7 @@ def go_to_page(page_name):
 add_custom_styles()
 
 # Halaman Tabel Periodik
-elif st.session_state["page"] == "table":
+elif st.session_state["page"] = "table":
     st.title("Tabel Periodik Sederhana")
     unsur = st.text_input("Masukkan Nama Unsur (misal: Hidrogen):")
      if unsur:
