@@ -140,9 +140,6 @@ def add_custom_styles():
     </style>
     """, unsafe_allow_html=True)
 
-
-    st.title("Tabel Periodik Sederhana")
-    unsur = st.text_input("Masukkan Nama Unsur (misal: Hidrogen):")
     
     if unsur:
         unsur = unsur.lower()  # Pastikan input pengguna dalam huruf kecil
