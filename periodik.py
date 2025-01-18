@@ -1,6 +1,6 @@
 import streamlit as st
 import time
-
+st.image("sunrise.jpg", caption="Sunrise by the mountains")
 # Fungsi untuk menambahkan gaya kustom
 def add_custom_styles():
     st.markdown("""
@@ -175,7 +175,7 @@ if st.session_state["page"] == "welcome":
 # Halaman Tabel Periodik
 elif st.session_state["page"] == "table":
     st.title("Tabel Periodik Sederhana")
-    st.balloons()
+    st.balloons("🎈")
     unsur = st.text_input("Masukkan Nama Unsur (misal: Hidrogen):")
 
     
