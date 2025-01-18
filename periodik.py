@@ -122,8 +122,6 @@ unsur_data = {
     "oganeson": {"simbol": "Og", "nomor_atom": 118, "nomor_massa": 294},
 }
 
-import streamlit as st
-
 # Fungsi untuk menambahkan gaya kustom
 def add_custom_styles():
     st.markdown("""
