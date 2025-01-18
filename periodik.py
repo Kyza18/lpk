@@ -161,13 +161,14 @@ if st.session_state["page"] == "welcome":
         </ul>
         </div>
     """, unsafe_allow_html=True)
+    st.balloons()
     st.button("Next", on_click=go_to_page, args=("table",))
 
 # Halaman Tabel Periodik
 elif st.session_state["page"] == "table":
     st.title("Tabel Periodik Sederhana")
     unsur = st.text_input("Masukkan Nama Unsur (misal: Hidrogen):")
-    st.balloons()
+
     
     if unsur:
         unsur = unsur.lower()  # Pastikan input pengguna dalam huruf kecil
@@ -176,7 +177,7 @@ elif st.session_state["page"] == "table":
             st.markdown(f'<div class="card card-green"><strong>Simbol Unsur:</strong> {data["simbol"]}</div>', unsafe_allow_html=True)
             st.markdown(f'<div class="card card-orange"><strong>Nomor Atom:</strong> {data["nomor_atom"]}</div>', unsafe_allow_html=True)
             st.markdown(f'<div class="card card-blue"><strong>Nomor Massa:</strong> {data["nomor_massa"]}</div>', unsafe_allow_html=True)
-            st.success('This is a success!', icon="🔥")
+            st.success('This is a success!',icon="🔥🔥🔥")
         else:
             st.error("Unsur tidak ditemukan. Harap masukkan nama unsur yang benar.")
         
