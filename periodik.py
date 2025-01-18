@@ -150,6 +150,9 @@ def go_to_page(page_name):
 add_custom_styles()
 
 # Halaman Selamat Datang
+with st.spinner('Wait for it...'):
+    time.sleep(5)
+st.success("Done!")
 if st.session_state["page"] == "welcome":
     st.title("Selamat Datang di Aplikasi Tabel Periodik Sederhana")
     st.toast('Hip!')
